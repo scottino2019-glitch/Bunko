@@ -1,0 +1,6 @@
+{
+  "name": "Bunko Archive & Stationery Studio",
+  "description": "Archivio home page in stile giapponese per editor linguistici con agenda e blocknote sfogliabili realistici in cinese e coreano.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

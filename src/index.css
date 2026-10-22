@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Warm, vibrant Japanese palette: Persimmon Kaki, Sakura Coral, Golden Yamabuki, Wisteria Fuji */
+    --desk-bg: #e6937b;
+    --text-ink: #2d1814; /* Deep warm chestnut ink (not pure black) */
+    --accent-vermilion: #d74b33;
+    --accent-yamabuki: #d6831d;
+    --accent-wisteria: #735099;
+    --accent-persimmon: #cb5d24;
+    --accent-camellia: #bf3f63;
+    --accent-asagi: #257d8e;
+  }
+
+  body {
+    background-color: #e5927b;
+    background-image: 
+      radial-gradient(ellipse at 20% 15%, #f2ae98 0%, transparent 55%),
+      radial-gradient(ellipse at 80% 80%, #de8268 0%, transparent 60%),
+      radial-gradient(#d67b63 1.5px, transparent 1.5px);
+    background-size: 100% 100%, 100% 100%, 24px 24px;
+    color: #2d1814;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Custom CJK Typography */
+.font-serif-jp {
+  font-family: 'Shippori Mincho', 'Noto Serif SC', 'Noto Serif KR', serif;
+}
+.font-cjk-zh {
+  font-family: 'Noto Serif SC', 'Shippori Mincho', serif;
+}
+.font-cjk-ko {
+  font-family: 'Noto Serif KR', 'Shippori Mincho', serif;
+}
+
+/* Seal stamp (Hanko) */
+.hanko-seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #d74b33;
+  color: #d74b33;
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 700;
+  border-radius: 6px;
+  background-color: #fae4dc;
+}
+
+/* 3D Book Page Flip Perspectives */
+.perspective-container {
+  perspective: 1800px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Washi Paper Grids (Tianzige & Wongoji) */
+.tianzige-grid {
+  background-color: #fbf0e6;
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, #e8ccbc 1px, transparent 1px),
+    linear-gradient(to bottom, #e8ccbc 1px, transparent 1px),
+    linear-gradient(to right, transparent 19px, rgba(215, 75, 51, 0.4) 20px, transparent 21px),
+    linear-gradient(to bottom, transparent 19px, rgba(215, 75, 51, 0.4) 20px, transparent 21px);
+}
+
+.wongoji-grid {
+  background-color: #faf0e4;
+  background-size: 34px 42px;
+  background-image: 
+    linear-gradient(to right, #5ca493 1.5px, transparent 1.5px),
+    linear-gradient(to bottom, #5ca493 1.5px, transparent 1.5px);
+}
+
+.ruled-lines {
+  background-color: #fcf1e4;
+  background-size: 100% 30px;
+  background-image: linear-gradient(to bottom, transparent 29px, #d8beaa 30px);
+  line-height: 30px;
+}
+
+/* Slip / Scroll Bookmark Card Styles */
+.scroll-slip {
+  position: relative;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 10px rgba(71, 30, 22, 0.15), 0 0 0 1px rgba(71, 30, 22, 0.08);
+}
+.scroll-slip:hover {
+  transform: translateX(4px);
+  box-shadow: 0 8px 18px rgba(71, 30, 22, 0.22), 0 0 0 1px rgba(71, 30, 22, 0.12);
+}
+
+/* Realistic Book Styling */
+.book-spine-crease {
+  box-shadow: inset 16px 0 20px -8px rgba(45, 24, 20, 0.25);
+}
+.book-spine-right {
+  box-shadow: inset -16px 0 20px -8px rgba(45, 24, 20, 0.25);
+}
